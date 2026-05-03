@@ -34,38 +34,38 @@
 - 2D UI지만 공간 안에 배치됨  
 - Depth를 통해 3D 느낌 표현 가능  
 
----
+
 
 ### ▪ Depth
 - Z축 방향 이동 개념  
 - 정면에서는 차이 적음  
 - 카메라 각도 변경 시 명확  
 
----
+
 
 ### ▪ Binding (`$`)
 - 상태값을 직접 수정 가능하게 연결  
 - 사용자 입력 → 상태 변경 → UI 반영  
 
----
+
 
 ### ▪ `.labelHidden()`
 - label UI에서 숨김  
 - 코드/접근성에서는 유지  
 
----
+
 
 ### ▪ Grid
 - 행/열 기반 레이아웃  
 - 표 형태 정렬 가능  
 
----
+
 
 ### ▪ GridRow
 - Grid 안의 한 줄  
 - 내부 요소는 열 기준 정렬  
 
----
+
 
 ### ▪ Circle 크기 계산 (minDiameter / diameterChange)
 - minDiameter → 기본 크기  
@@ -79,19 +79,19 @@
   → 원이 뒤로 갈수록 점점 커짐  
   → Depth와 결합되어 원근감 형성  
 
----
+
 
 ### ▪ `.padding()` vs `.padding3D()`
 - `.padding()` → 2D 여백  
 - `.padding3D()` → 3D 공간 여백  
 
----
+
 
 ### ▪ Slider Label
 - Slider 기능 설명  
 - 접근성/구조용 텍스트  
 
----
+
 
 ## 💡 What Was Interesting (흥미로웠던 점)
 - 정면에서는 Depth 차이가 거의 느껴지지 않음  
@@ -103,7 +103,7 @@
 - Grid 정렬은 이해했지만  
   → VStack/HStack과 차이는 아직 명확하지 않음  
 
----
+
 
 ## ❗ Difficulties (어려웠던 점)
 - Binding  
@@ -118,7 +118,7 @@
 - Frame 설정  
   → 적절한 크기 기준이 아직 없음  
 
----
+
 
 ## ❓ Questions (궁금한 점)
 ### Q1. 왜 Binding을 사용하는가?
@@ -127,7 +127,7 @@
 - 값 전달이 아니라 값 수정 가능해야 함  
 - UI와 상태를 연결하기 위해 필요  
 
----
+
 
 ### Q2. `.labelHidden()`은 무엇인가?
 
@@ -135,14 +135,14 @@
 - UI는 깔끔하게 유지  
 - 의미는 코드에 유지  
 
----
+
 
 ### Q3. Grid / GridRow는 왜 사용하는가?
 
 - 여러 줄 UI를 열 기준으로 정렬  
 - label + control 구조에 적합  
 
----
+
 
 ### Q4. Circle 크기 계산 방식은 어떻게 적용되는가?
 
@@ -151,28 +151,28 @@
 - 일정 간격으로 크기 변화  
 - Depth와 함께 원근감 형성  
 
----
+
 
 ### Q5. `.padding3D`는 왜 필요한가?
 
 - visionOS는 3D 공간 UI  
 - Z축까지 고려한 여백 필요  
 
----
+
 
 ### Q6. GridRow 여러 개 배치 구조
 
 - Row 단위로 위 → 아래 배치  
 - 각 Row는 동일 열 기준 정렬  
 
----
+
 
 ### Q7. Slider 안 Text의 역할
 
 - Slider 기능 설명  
 - 접근성/구조용 label  
 
----
+
 
 ## 🚀 Next Step (다음 단계)
 ### ▪ Continue practicing
@@ -184,7 +184,7 @@
 - Circle 대신 다른 Shape로 변경  
 - 여러 Shape를 쌓아서 구성해보기  
 
----
+
 
 ### ▪ Challenge yourself
 
@@ -195,7 +195,7 @@
   → 랜덤으로 하나의 단어만 더 앞으로 나오게 하기  
   → 가장 앞에 있는 단어 맞추기  
 
----
+
 
 ### ▪ What’s next?
 
