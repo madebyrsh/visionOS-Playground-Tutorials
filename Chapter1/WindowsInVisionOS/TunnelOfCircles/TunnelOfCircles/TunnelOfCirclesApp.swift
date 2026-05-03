@@ -13,5 +13,6 @@ struct TunnelOfCirclesApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize) // Window를 줄여도 항상 컨텐츠 사이즈를 맞춤
     }
 }
