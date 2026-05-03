@@ -407,7 +407,7 @@
 
 ---
 
-## 🔗 References (참고 자료)
+## 🔗 References
 
 - visionOS Overview  
   https://developer.apple.com/visionos/
