@@ -194,6 +194,31 @@
 
 ---
 
+## 🔗 References (참고 자료)
+
+- visionOS Overview  
+  https://developer.apple.com/visionos/
+
+- SwiftUI Documentation  
+  https://developer.apple.com/documentation/swiftui
+
+- Material
+  https://developer.apple.com/documentation/swiftui/material
+
+- State
+  https://developer.apple.com/documentation/swiftui/state
+
+- Binding  
+  https://developer.apple.com/documentation/swiftui/binding
+
+- Grid  
+  https://developer.apple.com/documentation/swiftui/grid
+
+- Interacting with your app in the visionOS simulator  
+  https://developer.apple.com/documentation/xcode/interacting-with-your-app-in-the-visionos-simulator
+  
+---
+
 # Chapter 1 - Windows in visionOS
 
 ## 📌 Summary
@@ -379,3 +404,28 @@
 - Learn Ornament features  
 - Understand how to add UI elements around a Window  
 - Expand visionOS-specific UI structure understanding  
+
+---
+
+## 🔗 References (참고 자료)
+
+- visionOS Overview  
+  https://developer.apple.com/visionos/
+
+- SwiftUI Documentation  
+  https://developer.apple.com/documentation/swiftui
+
+- Material
+  https://developer.apple.com/documentation/swiftui/material
+
+- State
+  https://developer.apple.com/documentation/swiftui/state
+
+- Binding  
+  https://developer.apple.com/documentation/swiftui/binding
+
+- Grid  
+  https://developer.apple.com/documentation/swiftui/grid
+
+- Interacting with your app in the visionOS simulator  
+  https://developer.apple.com/documentation/xcode/interacting-with-your-app-in-the-visionos-simulator
