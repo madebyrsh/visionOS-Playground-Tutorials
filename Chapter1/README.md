@@ -191,3 +191,191 @@
 - Ornament 기능 학습  
 - Window 주변에 UI 요소 추가 방법 이해  
 - visionOS 특화 UI 구조 학습 확장  
+
+---
+
+# Chapter 1 - Windows in visionOS
+
+## 📌 Summary
+- Understand the **Window-based app structure**, the core UI in visionOS  
+- Learn how to add **Depth** to 2D Views to create spatial UI  
+- Use SwiftUI state management (`@State`, Binding) to update UI in real time  
+- Implement an interactive UI where users can **directly control depth** using Grid and Slider  
+
+
+## 🧠 What I Learned
+- Through the `@State` + Binding structure  
+    → Learned how UI and data are connected in real time  
+   
+- In `ColorPicker(selection: $value)`  
+    → `$` is not just value passing but **two-way data binding (Binding)**  
+  
+- Using Grid / GridRow  
+    → Able to create a more **structured table-like layout** compared to VStack  
+  
+- In visionOS  
+    → UI is not just 2D, but **Depth is a key UI element**  
+
+- With `.padding3D`  
+    → Introduced a **spatial layout concept including the Z-axis**  
+  
+- `.windowResizability(.contentSize)`  
+    → Window size automatically adjusts to content  
+    → UI does not get clipped when the window shrinks  
+    → Requires a content-driven layout approach  
+
+---
+
+## 🔍 Key Concepts
+
+### ▪ visionOS Window
+- A 2D UI placed in a spatial environment  
+- Can express a 3D feel through Depth  
+
+
+### ▪ Depth
+- Concept of movement along the Z-axis  
+- Minimal difference from the front view  
+- Becomes clear when changing camera angle  
+
+
+### ▪ Binding (`$`)
+- Connects state so it can be directly modified  
+- User input → state change → UI update  
+
+
+### ▪ `.labelHidden()`
+- Hides the label in UI  
+- Keeps it in code/accessibility  
+
+
+### ▪ Grid
+- Row/column-based layout  
+- Enables table-like alignment  
+
+
+### ▪ GridRow
+- A single row inside Grid  
+- Elements are aligned based on columns  
+
+
+### ▪ Circle size calculation (minDiameter / diameterChange)
+- minDiameter → base size  
+- diameterChange → increment value  
+- index → iteration order  
+
+- Calculation method  
+  → base size + (increment × index)  
+  → `.frame(height: minDiameter + diameterChange * Double(index))`
+
+- Result  
+  → Circles gradually increase in size toward the back  
+  → Creates perspective when combined with Depth  
+
+
+### ▪ `.padding()` vs `.padding3D()`
+- `.padding()` → 2D spacing  
+- `.padding3D()` → 3D spatial spacing  
+
+
+### ▪ Slider Label
+- Describes the function of the Slider  
+- Text for accessibility/structure  
+
+---
+
+## 💡 What Was Interesting
+- Depth difference is barely noticeable from the front view  
+- Becomes clearly visible when changing the camera angle  
+
+- `.padding3D` is not just a layer  
+  → It feels like UI is placed in actual space  
+
+- Grid alignment is understood  
+  → But the difference from VStack/HStack is still unclear  
+
+---
+
+## ❗ Difficulties
+- Binding  
+  → Concept is understood, but real-world usage is still unclear  
+
+- Grid / GridRow  
+  → Hard to feel the practical advantage  
+
+- Depth values  
+  → Difficult to determine appropriate values  
+
+- Frame settings  
+  → No clear 기준 for sizing yet  
+
+---
+
+## ❓ Questions
+
+### Q1. Why use Binding?
+- User input needs to update state  
+- Not just passing values, but modifying them  
+- Required to connect UI and state  
+
+
+### Q2. What is `.labelHidden()`?
+- Hides label only in UI  
+- Keeps UI clean  
+- Preserves meaning in code  
+
+
+### Q3. Why use Grid / GridRow?
+- Aligns multi-row UI based on columns  
+- Suitable for label + control structure  
+
+
+### Q4. How is Circle size calculation applied?
+- Structure: base size + (increment × index)  
+- As index increases → Circle size increases  
+- Size changes at consistent intervals  
+- Creates perspective with Depth  
+
+
+### Q5. Why is `.padding3D` needed?
+- visionOS uses spatial UI  
+- Requires spacing that considers the Z-axis  
+
+
+### Q6. Multiple GridRow layout structure
+- Rows are arranged top → bottom  
+- Each row aligns based on the same column 기준  
+
+
+### Q7. Role of Text inside Slider
+- Describes the Slider’s function  
+- Label for accessibility/structure  
+
+---
+
+## 🚀 Next Step
+
+### ▪ Continue practicing
+- Increase the number of Circles  
+- Modify Circle size calculation  
+- Add a third color  
+- Add ColorPicker to change colors  
+- Replace Circle with other Shapes  
+- Stack multiple Shapes  
+
+
+### ▪ Challenge yourself
+- Create a Grid-based word UI  
+- Arrange words that represent yourself  
+- Apply padding behind each word  
+
+- Additional challenge  
+  → Randomly bring one word forward  
+  → Make users guess the front word  
+
+
+### ▪ What’s next?
+- Next tutorial expands the Window concept  
+- Learn Ornament features  
+- Understand how to add UI elements around a Window  
+- Expand visionOS-specific UI structure understanding  
