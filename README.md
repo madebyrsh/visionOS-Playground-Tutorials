@@ -44,6 +44,7 @@
 
 ## 📂 레포지토리 구조
 
+```
 visionOS-Playground-Tutorials/
 │
 ├── Chapter1/
@@ -52,12 +53,13 @@ visionOS-Playground-Tutorials/
 │       └── README.md
 │
 ├── Chapter2/
-│   └── …
+│   └── ...
 │
 ├── Chapter3/
-│   └── …
+│   └── ...
 │
 └── README.md
+```
 
 각 챕터는 다음을 포함합니다:
 
@@ -163,6 +165,7 @@ Rather than simply following tutorials,
 
 ## 📂 Repository Structure
 
+```
 visionOS-Playground-Tutorials/
 │
 ├── Chapter1/
@@ -171,12 +174,13 @@ visionOS-Playground-Tutorials/
 │       └── README.md
 │
 ├── Chapter2/
-│   └── …
+│   └── ...
 │
 ├── Chapter3/
-│   └── …
+│   └── ...
 │
 └── README.md
+```
 
 Each chapter includes:
 
