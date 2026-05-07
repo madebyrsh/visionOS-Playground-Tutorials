@@ -28,7 +28,7 @@ struct ContentView: View {
                 .padding() // 제목 패딩
             
             ZStack {
-                ForEach (0..<4) { index in
+                ForEach (0..<4) { index in 
                     Circle()
                         .stroke(lineWidth: 30)
                         .foregroundStyle(colors[index % 2])
