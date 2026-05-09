@@ -29,9 +29,9 @@ struct ContentView: View {
             
             ZStack {
                 ForEach (0..<6) { index in // 원의 개수 증가 4 > 6
-                    Circle()
+                    Circle() // Rectangle, RoundedRectangle, Capsule 등 다양한 형태 변경
                         .stroke(lineWidth: 30)
-                        .foregroundStyle(colors[index % 2])
+                        .foregroundStyle(colors[index % 3])
                         .frame(height: minDiameter + diameterChange * Double(index))
                         .padding3D(.back, depth)
                 }
