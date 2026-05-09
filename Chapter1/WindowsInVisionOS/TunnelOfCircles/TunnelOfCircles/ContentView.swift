@@ -61,7 +61,7 @@ struct ContentView: View {
             }
             .padding(30)
             .background(.thickMaterial)
-            .frame(maxWidth: 320) // 슬라이더의 최대 가로 사이즈 정의
+            .frame(maxWidth: 500) // 슬라이더의 최대 가로 사이즈 정의  minDiameter + diameterChange * Double(index) 
             
         }
         .frame(minHeight: 560) // 전체 VStack의 최소 길이 정의
