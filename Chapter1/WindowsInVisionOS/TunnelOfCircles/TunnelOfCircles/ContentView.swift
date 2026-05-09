@@ -17,8 +17,8 @@ struct ContentView: View {
     
     
     // Circle의 사이즈
-    let minDiameter = 50.0
-    let diameterChange = 70.0
+    let minDiameter = 10.0 // 첫번째 원의 크기
+    let diameterChange = 80.0 // 추가 원들의 크기
     
     var body: some View {
         VStack(spacing : 40) { // .padding을 제거하고 스페이싱 간격 정의
