@@ -11,7 +11,7 @@ import RealityKitContent
 
 struct ContentView: View {
     // colors 속성 @State
-    @State private var colors: [Color] = [.cyan, .blue, .black] // colors @State 기존 2색상에서 1색상 프로퍼티 추가
+    @State private var colors: [Color] = [.cyan, .blue, .white] // colors @State 기존 2색상에서 1색상 프로퍼티 추가
     // Circle 깊이 속성 @State
     @State private var depth: Double = 0.0
     
@@ -53,6 +53,7 @@ struct ContentView: View {
                     HStack { // HStack
                         ColorPicker("Color", selection: $colors[0]) // Color Picker
                         ColorPicker("Color", selection: $colors[1])
+                        ColorPicker("Color", selection: $colors[2]) // Color Picker 추가
                         
                         
                         Spacer() // 색상 피커와 텍스트를 좌측 정렬하기 위함
