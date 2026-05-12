@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    
+    @Environment(\.openWindow) private var openWindow // OpenWindowAction 애 액세스 하기 위함
     @State private var label = Label()
     
     var body: some View {
@@ -21,6 +21,9 @@ struct ContentView: View {
                 HStack(spacing: 30) {
                     Slider(value: $label.cornerRadius, in: 0...100)
                         .frame(width: 100)
+                    Button("Create") {
+                        openWindow(value: label)
+                    }
                 }
                 .padding()
                 .glassBackgroundEffect()
