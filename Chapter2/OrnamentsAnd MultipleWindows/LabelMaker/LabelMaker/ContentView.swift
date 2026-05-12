@@ -23,6 +23,7 @@ struct ContentView: View {
                         .frame(width: 100)
                     Button("Create") {
                         openWindow(value: label)
+                        label = Label()
                     }
                 }
                 .padding()
