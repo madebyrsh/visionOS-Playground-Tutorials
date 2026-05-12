@@ -14,7 +14,7 @@ struct LabelView: View {
     
     var body: some View {
         
-        TextField("Type to enter text", text: $label, axis: .vertical) // 입력창 axis .vertical이 하는 것은 무엇인가
+        TextField("Type to enter text", text: $label.text, axis: .vertical) // 입력창 axis .vertical이 하는 것은 무엇인가
             .frame(width: 500, height: 500)
             .padding()
             .background(.blue, in: RoundedRectangle(cornerRadius: label.cornerRadius)) // 왜 in: RoundedRectangle방식인지?
@@ -29,5 +29,5 @@ struct LabelView: View {
 
 #Preview {
     @Previewable @State var label = Label() //@prewviewable은 뭐지? 여기서는 왜 @state?
-    LabelView()
+    LabelView(label: $label)
 }
