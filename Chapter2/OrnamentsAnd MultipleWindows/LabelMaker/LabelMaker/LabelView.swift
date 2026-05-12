@@ -17,7 +17,9 @@ struct LabelView: View {
         TextField("Type to enter text", text: $text) // 입력창
             .frame(width: 500, height: 500)
             .padding()
-            .background(.blue)
+            .background(.blue, in: RoundedRectangle(cornerRadius: 20)) // 왜 in: RoundedRectangle방식인지?
+            .foregroundStyle(.black) // foregroundStyle은 무엇인가?
+            .font(.system(size: 40, weight: .semibold))
     }
     
     
