@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct LabelView: View {
+    
+    
+    @State private var text = "" // label 텍스트 프로퍼티 생성
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        TextField("Type to enter text", text: $text) // 입력창
+            .frame(width: 500, height: 500)
+            .padding()
+            .background(.blue)
     }
+    
+    
 }
 
 #Preview {
