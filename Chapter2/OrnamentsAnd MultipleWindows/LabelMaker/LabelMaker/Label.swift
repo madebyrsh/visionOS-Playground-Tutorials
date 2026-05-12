@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Label {
+    var id = UUID()
+    var text = ""
+    var cornerRadius = 20.0
+}
+
+
