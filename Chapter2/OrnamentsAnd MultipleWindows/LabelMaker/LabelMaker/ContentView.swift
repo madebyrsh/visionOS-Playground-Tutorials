@@ -18,7 +18,11 @@ struct ContentView: View {
         LabelView(label: $label)
             .padding()
             .ornament(attachmentAnchor: .scene(.bottom)) { // ornament란? attachAnchor이란 .scene(.bottom)이란 그리고 scene의 기준점은?
-                
+                HStack(spacing: 30) {
+                    
+                }
+                .padding()
+                .glassBackgroundEffect()
             }
         
     }
