@@ -9,113 +9,154 @@
 # Chapter 1 - Windows in visionOS
 
 ## 📌 Summary (요약)
-- 
-- 
-- 
-- 
+- visionOS의 고유 UI 요소인 **Ornament** 개념 이해
+- Window와 분리되지 않으면서 항상 접근 가능한 UI 구성 방법 학습
+- `openWindow`를 활용한 다중 Window 생성 방식 이해
+- `@Environment`를 활용한 visionOS 환경 값 접근 방식 학습
+- Codable 데이터를 활용하여 Window에 데이터를 전달하는 방식 학습
+- Slider, TextField, Color Picker 등을 Ornament 안에 배치하여 인터랙션 UI 구현
 
 
 ## 🧠 What I Learned (배운 점)
-- 
-   
--
-  
--  
-  
-- 
+- Ornament  
+  Window 앞쪽에 떠 있는 visionOS 전용 UI 요소  
 
--  
-  
-- 
+- Ornament UI  
+  Window 내용과 겹치지 않으면서 항상 접근 가능  
 
+- `@Environment(\.openWindow)`  
+  Environment를 통해 Window 제어 기능 접근 가능  
+
+- `WindowGroup(for:)`  
+  특정 데이터 타입 기반으로 Window 생성 가능  
+
+- `Codable`  
+  데이터를 Window 간 전달 가능하게 만듦  
+
+- `Binding`
+  여러 View가 같은 데이터를 공유하고 수정 가능  
+
+- `.windowStyle(.plain)`  
+  기본 visionOS Window 스타일 제거 가능  
+
+- `.glassBackgroundEffect()`  
+  visionOS 스타일의 반투명 유리 재질 효과 제공  
+  
 ---
 
 ## 🔍 Key Concepts (핵심 개념)
 
-### ▪ visionOS Window
-- 2D UI지만 공간 안에 배치됨  
-- Depth를 통해 3D 느낌 표현 가능  
+### ▪ Ornament
+- visionOS 전용 Window UI 요소  
+- Window 앞쪽에 떠 있는 형태  
+- Window와 함께 이동  
+- 스크롤과 관계없이 항상 접근 가능  
 
+---
 
-### ▪ Depth
-- Z축 방향 이동 개념  
-- 정면에서는 차이 적음  
-- 카메라 각도 변경 시 명확  
+### ▪ `openWindow`
+- 새로운 Window 생성 기능  
+- 특정 WindowGroup을 열 때 사용  
 
+---
 
-### ▪ Binding (`$`)
-- 상태값을 직접 수정 가능하게 연결  
-- 사용자 입력 → 상태 변경 → UI 반영  
+### ▪ `@Environment`
+- 시스템 환경 값 접근 방식  
+- Window 열기, dismiss 등 시스템 기능 접근 가능  
 
+---
 
-### ▪ `.labelHidden()`
-- label UI에서 숨김  
-- 코드/접근성에서는 유지  
+### ▪ `WindowGroup(for:)`
+- 특정 데이터 타입 기반 Window 생성  
+- Window마다 다른 데이터 전달 가능  
 
+---
 
-### ▪ Grid
-- 행/열 기반 레이아웃  
-- 표 형태 정렬 가능  
+### ▪ `Binding`
+- 여러 View가 같은 상태값 공유 가능  
+- 값 수정 시 UI 자동 업데이트  
 
+---
 
-### ▪ GridRow
-- Grid 안의 한 줄  
-- 내부 요소는 열 기준 정렬  
+### ▪ `Codable`
+- 데이터를 저장/전달 가능한 형태로 변환 가능  
+- Window 간 데이터 전달에 사용  
 
+---
 
-### ▪ Circle 크기 계산 (minDiameter / diameterChange)
-- minDiameter → 기본 크기  
-- diameterChange → 증가량  
-- index → 반복 순서 값  
+### ▪ `Hashable`
+- 데이터를 고유하게 식별 가능하게 함  
+- List, Dictionary, Window 식별 등에 사용  
 
-- 계산 방식  
-  → 기본 크기 + (증가량 × index)  
-  → `.frame(height: minDiameter + diameterChange * Double(index))`
+---
 
-- 결과  
-  → 원이 뒤로 갈수록 점점 커짐  
-  → Depth와 결합되어 원근감 형성  
+### ▪ `.glassBackgroundEffect()`
+- visionOS 스타일 유리 배경 효과  
+- 반투명 공간 UI 느낌 제공  
 
+---
 
-### ▪ `.padding()` vs `.padding3D()`
-- `.padding()` → 2D 여백  
-- `.padding3D()` → 3D 공간 여백  
+### ▪ `.windowStyle(.plain)`
+- 기본 visionOS Window 프레임 제거  
+- 기본 시스템 스타일 최소화 가능  
 
+---
 
-### ▪ Slider Label
-- Slider 기능 설명  
-- 접근성/구조용 텍스트  
+### ▪ `.multilineTextAlignment()`
+- 여러 줄 Text 정렬 방식 설정  
+- `.center` 사용 시 가운데 정렬 가능  
+
+---
+
+### ▪ TextField Axis
+- TextField 스크롤 방향 설정  
+- `.vertical` 사용 시 줄바꿈 가능  
+- 긴 텍스트 입력 시 세로 확장 가능  
+
+---
+
+### ▪ `attachAnchor`
+- Ornament가 Window 어디에 붙는지 결정  
+
+---
+
+### ▪ `.scene(.bottom)`
+- Scene 기준 아래쪽 위치 의미  
+- Ornament 위치 기준점 설정  
+
 
 ---
 
 ## 💡 What Was Interesting (흥미로웠던 점)
-- 정면에서는 Depth 차이가 거의 느껴지지 않음  
-- 카메라 각도 변경 시 공간에서 움직이는 느낌 명확  
+- Ornament가 Window와 함께 움직이지만  
+  스크롤에는 영향을 받지 않는 점이 인상적이었음  
 
-- `.padding3D`는 단순 레이어가 아니라  
-  → 실제 공간에서 UI가 배치되는 느낌  
+- `.glassBackgroundEffect()`를 적용했을 때  
+  visionOS 특유의 공간 UI 느낌이 강하게 느껴졌음  
 
-- Grid 정렬은 이해했지만  
-  → VStack/HStack과 차이는 아직 명확하지 않음  
+- Window마다 서로 다른 데이터를 가질 수 있다는 점이  
+  기존 iOS 앱 구조와 다르게 느껴졌음  
+
+- `.windowStyle(.plain)` 적용 시  
+  기본 시스템 Window 스타일이 크게 줄어드는 점이 흥미로웠음  
+
 
 ---
 
 ## ❗ Difficulties (어려웠던 점)
-- Binding  
-  → 개념은 이해했지만 실전 적용 기준이 모호  
+- `@Environment(\.openWindow)` 구조가 처음에는 매우 낯설었음  
 
-- Grid / GridRow  
-  → 장점 체감 부족  
+- `Binding`과 `@State` 그리고 `@Environment` 의 역할 차이를 완전히 이해하기 어려웠음  
 
-- Depth 값  
-  → 어느 정도가 적절한지 감 잡기 어려움  
+- `WindowGroup(for:)`가 데이터를 어떻게 Window에 전달하는지 이해하기 어려웠음  
 
-- Frame 설정  
-  → 적절한 크기 기준이 아직 없음  
+- Ornament 위치 기준(scene / attachAnchor)이 공간 기준이라 감 잡기 어려웠음  
+
+- 기본 Window 프레임과 실제 컨텐츠 영역의 관계 이해가 어려웠음  
 
 ---
 
-## ❓ Questions (궁금한 점)
+## ❓ Questions (궁금한 점) 여기서부터 수정
 
 ### Q1. 왜 Binding을 사용하는가?
 - 사용자 입력값을 상태에 반영해야 함  
