@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ColorButton: View {
-    
     @State var color: Color
+    var selectColor: (() -> Void)
     
     var body: some View {
       
         Button {
-            
+            selectColor()
         } label: {
             Circle()
                 .foregroundStyle(color)
@@ -26,6 +26,7 @@ struct ColorButton: View {
 
 #Preview {
     ColorButton(color: .cyan) {
+        
         
     }
 }
