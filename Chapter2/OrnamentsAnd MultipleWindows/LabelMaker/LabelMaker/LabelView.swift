@@ -9,14 +9,14 @@ import SwiftUI
 
 struct LabelView: View {
     
-    
+    @Environment(\.isEnabled) private var isEnabled
     @Binding var label: Label // label 텍스트 프로퍼티 생성 // @state private var text = "" 를 @Binding var label: Label로 변경한 이유는?
     
     var body: some View {
         
         TextField("Type to enter text", text: $label.text, axis: .vertical) // 입력창 axis .vertical이 하는 것은 무엇인가
-            .frame(width: 500, height: 500)
-            .padding()
+            .frame(width: 500, height: isEnabled ? 500 : nil)
+            .padding(50)
             .background(label.seletedColor(), in: RoundedRectangle(cornerRadius: label.cornerRadius)) // 왜 in: RoundedRectangle방식인지?
             .foregroundStyle(.black) // foregroundStyle은 무엇인가?
             .font(.system(size: 40, weight: .semibold))
@@ -30,4 +30,5 @@ struct LabelView: View {
 #Preview {
     @Previewable @State var label = Label() //@prewviewable은 뭐지? 여기서는 왜 @state?
     LabelView(label: $label)
+        .disabled(true)
 }
