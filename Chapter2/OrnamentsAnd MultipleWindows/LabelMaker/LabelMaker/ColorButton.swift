@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ColorButton: View {
+    
+    @State var color: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      
+        Button {
+            
+        } label: {
+            Circle()
+                .foregroundStyle(color)
+                .frame(height: 34)
+        }
+        .buttonBorderShape(.circle)
     }
 }
 
 #Preview {
-    ColorButton()
+    ColorButton(color: .cyan) {
+        
+    }
 }
