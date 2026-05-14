@@ -30,7 +30,7 @@ struct ContentView: View {
                     }
                     Button("Create") {
                         openWindow(value: label)
-                        label = Label()
+                        label = Label(cornerRadius: label.cornerRadius, colorIndex: label.colorIndex)
                     }
                 }
                 .padding([.top, .bottom], 15)
