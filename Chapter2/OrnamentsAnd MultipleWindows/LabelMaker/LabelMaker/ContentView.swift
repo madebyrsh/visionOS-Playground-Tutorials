@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         
         LabelView(label: $label)
-            .padding()
+            .padding(55)
             .ornament(attachmentAnchor: .scene(.bottom)) { // ornament란? attachAnchor이란 .scene(.bottom)이란 그리고 scene의 기준점은?
                 HStack(spacing: 30) {
                     Slider(value: $label.cornerRadius, in: 0...100)
@@ -33,7 +33,8 @@ struct ContentView: View {
                         label = Label()
                     }
                 }
-                .padding()
+                .padding([.top, .bottom], 15)
+                .padding([.leading, .trailing], 38)
                 .glassBackgroundEffect()
             }
         
