@@ -10,7 +10,11 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    
+    @Environment(\.openWindow) private var openWindow // @Environment는 항상 @State나 @Binding보다 윗줄에 써야하는가? 그리고 이건 새창을 열때 항상 필요한가?
     @State private var selectedCreature: SeaCreature? //왜 '?'가 붙는가?
+    
+    
     
     
     private var seaCreatures = [
@@ -36,7 +40,7 @@ struct ContentView: View {
                     .navigationTitle(selectedCreature.name) // 여기서 어떻게 버튼을 누를때마다 각 3d모델이 어떻게 인식하고 다 나오는가?
                     .toolbar { // toolbar는 무엇인가 여기서 왜 toolbar를 사용하나?
                         Button(action: {
-                            
+                            openWindow(id: "creatureWindow", value: selectedCreature.modelName)
                         }, label: {
                             Text("View \(selectedCreature.name)") // 여기서 왜 "View 다음에 \로 (selectedCreature.name)"이 나오는가?
                         })

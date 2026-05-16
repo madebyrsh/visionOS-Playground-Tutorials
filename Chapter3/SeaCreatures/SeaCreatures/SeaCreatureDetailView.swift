@@ -13,6 +13,9 @@ struct SeaCreatureDetailView: View {
     
     let modelName: String // 이 상수를 생성하자마자 #Preview에 Missing argument 에러가 뜨는 이유는?
     
+    @State private var horizontalRotation = CGFloat.zero
+    @State private var verticalRotation = CGFloat.zero
+    
     var body: some View {
         Model3D(named: modelName, bundle: realityKitContentBundle)
     }
