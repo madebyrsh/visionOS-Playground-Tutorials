@@ -32,7 +32,15 @@ struct ContentView: View {
             .navigationTitle("Sea Creatures")
         } detail: {
             if let selectedCreature { // if let은 if와 무엇이 다르며 여기서는 왜 if let 인가?
-                
+                Model3D(named: selectedCreature.modelName, bundle: realityKitContentBundle)
+                    .navigationTitle(selectedCreature.name) // 여기서 어떻게 버튼을 누를때마다 각 3d모델이 어떻게 인식하고 다 나오는가?
+                    .toolbar { // toolbar는 무엇인가 여기서 왜 toolbar를 사용하나?
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("View \(selectedCreature.name)") // 여기서 왜 "View 다음에 \로 (selectedCreature.name)"이 나오는가?
+                        })
+                    }
             } else {
                 Text("Select a sea creature")
             }
