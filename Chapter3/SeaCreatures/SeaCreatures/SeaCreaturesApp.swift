@@ -13,5 +13,7 @@ struct SeaCreaturesApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        WindowGroup(id: "creatureWindow", for: String.self) { $modelName in} // 이부분의 코드를 하나도 모르겠다 어떤 의미인지
     }
 }

@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct SeaCreatureDetailView: View {
     
     let modelName: String // 이 상수를 생성하자마자 #Preview에 Missing argument 에러가 뜨는 이유는?
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Model3D(named: modelName, bundle: realityKitContentBundle)
     }
 }
 
