@@ -12,10 +12,10 @@ import RealityKitContent
 struct ContentView: View {
     
     private var seaCreatures = [
-        SeaCreature(name: Clam, modelName: ClamScene),
-        SeaCreature(name: Fish, modelName: FishScene),
-        SeaCreature(name: Slug, modelName: SlugScene),
-        SeaCreature(name: Starfish, modelName: StarfishScene)
+        SeaCreature(name: "Clam", modelName: "ClamScene"),
+        SeaCreature(name: "Fish", modelName: "FishScene"),
+        SeaCreature(name: "Slug", modelName: "SlugScene"),
+        SeaCreature(name: "Starfish", modelName: "StarfishScene")
     ]
     
     var body: some View {
