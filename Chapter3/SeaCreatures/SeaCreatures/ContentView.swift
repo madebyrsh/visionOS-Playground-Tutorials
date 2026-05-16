@@ -10,6 +10,8 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    @State private var selectedCreature: SeaCreature? //왜 '?'가 붙는가?
+    
     
     private var seaCreatures = [
         SeaCreature(name: "Clam", modelName: "ClamScene"),
@@ -19,13 +21,22 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        VStack {
-            Model3D(named: "ClamScene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
+        NavigationSplitView {
+            List(seaCreatures) { creature in // 여기서 creature in 은 왜?
+                Button(action: { // Button () 안에 action:, label을 다 함께 넣는 이유는?
+                    selectedCreature = creature
+                }, label: {
+                    Text(creature.name)
+                })
+            }
+            .navigationTitle("Sea Creatures")
+        } detail: {
+            if let selectedCreature { // if let은 if와 무엇이 다르며 여기서는 왜 if let 인가?
+                
+            } else {
+                Text("Select a sea creature")
+            }
         }
-        .padding()
     }
 }
 
