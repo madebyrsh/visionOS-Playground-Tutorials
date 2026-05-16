@@ -1,10 +1,16 @@
 {
   "advancedEditorSelectedIdentifier" : "ProjectBrowser",
   "openSceneRelativePaths" : [
-    "Scene.usda"
+    "Scene.usda",
+    "ClamScene.usda",
+    "SlugScene.usda",
+    "FishScene.usda",
+    "StarfishScene.usda"
   ],
   "recentIdentifiers" : {
+    "26DBAE76-5DD8-47B6-A085-1B4ADA111097" : [
 
+    ]
   },
   "sceneCameraHistory" : {
     "26DBAE76-5DD8-47B6-A085-1B4ADA111097" : [
@@ -30,9 +36,34 @@
           1
         ]
       }
+    ],
+    "8BAE3122-5E34-464A-8AA9-BD24E71A2C25" : [
+      {
+        "date" : 800613261.490201,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.7071069,
+          -0.70710677,
+          0,
+          0,
+          0.70710677,
+          0.7071069,
+          0,
+          0,
+          1.3271698,
+          1.3271699,
+          1
+        ]
+      }
     ]
   },
   "sceneViewportBackgroundColors" : {
 
-  }
+  },
+  "selectedSceneRelativePath" : "StarfishScene.usda"
 }

@@ -12,7 +12,7 @@ import RealityKitContent
 struct ContentView: View {
     var body: some View {
         VStack {
-            Model3D(named: "ToyBiplane", bundle: realityKitContentBundle)
+            Model3D(named: "ClamScene", bundle: realityKitContentBundle)
                 .padding(.bottom, 50)
 
             Text("Hello, world!")
